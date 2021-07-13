@@ -1,0 +1,58 @@
+<div class="contact">
+        
+    <!-- Contact Info -->
+
+    <div class="contact_info_container">
+        <div class="container">
+            <div class="row">
+
+                <!-- Contact Form -->
+                <div class="col-lg-12">
+                    <div class="contact_form">
+                        <div class="contact_info_title" style="margin-top:30px ;">{{title}} Course Details</div>
+                        <form  class="comment_form" #addCourseForm="ngForm" (ngSubmit)="submitCourseData()">
+                            <div>
+                                <div class="form_title">Course Title</div>
+                                <input type="text" class="comment_input" required="required" [(ngModel)]="course.name" [ngModelOptions]="{standalone:true}">
+                            </div>
+                            <div>
+                                <div class="form_title">CourseDescription</div>
+                                <textarea type="text-area" class="comment_input" required="required" [(ngModel)]="course.description" [ngModelOptions]="{standalone:true}"></textarea>
+                            </div>
+                            <div>
+                                <div class="form_title">CourseHoursNumber</div>
+                                <input type="number" class="comment_input" required="required" [(ngModel)]="course.numberHours" [ngModelOptions]="{standalone:true}">
+                            </div>
+                            <div>
+                                <div class="form_title">CourseTrainer</div>
+                                <input type="text" class="comment_input" required="required" [(ngModel)]="course.trainer" [ngModelOptions]="{standalone:true}">
+                            </div>
+                            <div>
+                                <div class="form_title">CoursePrice</div>
+                                <input type="number" class="comment_input" required="required" [(ngModel)]="course.price" [ngModelOptions]="{standalone:true}">
+                            </div>
+                            
+                            <div>
+                            <div class="form_title">Course Student Numbers</div>
+                                <input type="number" class="comment_input" required="required" [(ngModel)]="course.studentNumbers" [ngModelOptions]="{standalone:true}">
+                            </div>
+
+                            <button type="button" (click)='filePicker.click()' class="btn btn-success">Select course image</button>
+                                <div class="form-group">
+                                            <input style="visibility: hidden;" type="file" class="form-control" #filePicker (change)='onImageSelected($event)' />
+                                </div>
+                                    <img [src]="imagePreview" *ngIf="imagePreview" width="200px" height="200px">
+
+                            <div>
+                                <button type="submit" class="comment_button trans_200"> {{title}} Course</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+              
+            </div>
+        </div>
+    </div>
+</div>
+

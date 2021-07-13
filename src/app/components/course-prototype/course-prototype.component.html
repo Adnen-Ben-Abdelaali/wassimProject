@@ -1,0 +1,34 @@
+<div class="course">
+    <div class="course_image"><img [src]="courseInput.img" alt=""></div>
+    <div class="course_body">
+        <h3 class="course_title"><a href="course.html">{{courseInput.name}}</a></h3>
+        <div class="course_teacher">{{courseInput.trainer}}</div>
+        <div class="course_text">
+            <p>{{courseInput.description}}</p>
+        </div>
+    </div>
+    <div class="course_footer">
+        <div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
+            <div class="course_info">
+                <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                <span> <strong>{{courseInput.studentNumbers}}</strong> Students</span>
+                
+            </div>
+
+            <div class="course_info">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <span>   {{courseInput.numberHours}}  Hours</span>
+            </div>   
+
+            <div class="course_info">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <span>5 Ratings</span>
+            </div>
+            <div class="course_price ml-auto">{{courseInput.price}} Dt</div>
+        </div>
+    </div>
+        <div class="text-center" *ngIf="displayBtn">
+    <button class="btn btn-info btn-danger" (click)='deleteCourse(courseInput._id)'>Delete</button>
+        </div>
+</div>
+

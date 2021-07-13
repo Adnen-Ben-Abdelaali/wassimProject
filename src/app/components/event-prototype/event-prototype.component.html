@@ -1,0 +1,24 @@
+<div class="col-lg-4 event_col">
+    <div class="event event_left">
+        <div class="event_image"><img src="assets/images/event_3.jpg" alt=""></div>
+        <div class="event_body d-flex flex-row align-items-start justify-content-start">
+            <div class="event_date">
+                <div class="d-flex flex-column align-items-center justify-content-center trans_200">
+                    <div class="event_day trans_200">{{eventInput.day}}</div>
+                    <div class="event_month trans_200">{{eventInput.month}}</div>
+                    <div class="event_year trans_200">{{eventInput.year}}</div>
+                </div>
+            </div>
+            <div class="event_content">
+                <div class="event_title"><a href="#">{{eventInput.title}}</a></div>
+                <div class="event_info_container">
+                    <div class="event_info"><i class="fa fa-clock-o" aria-hidden="true"></i><span>{{eventInput.beginTime}}-{{eventInput.endTime}}</span></div>
+                    <div class="event_info"><i class="fa fa-map-marker" aria-hidden="true"></i><span>{{eventInput.place}}</span></div>
+                    <div class="event_text">
+                        <p>{{eventInput.description}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

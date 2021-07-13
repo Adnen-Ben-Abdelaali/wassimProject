@@ -1,0 +1,25 @@
+<table class="table table-striperd">
+    <tr>
+        <th>Trainer_Id</th>
+        <th>Name</th>
+        <th>Speciality</th>
+        <th>Grade</th>
+        <th>Email</th>
+        <th>Image</th>
+        <th>Actions</th>
+    </tr>
+    <tr *ngFor="let trainer of trainers"> 
+        <td>{{trainer._id}}</td>
+        <td>{{trainer.firstName}} {{trainer.lastName}}</td>
+        <td>{{trainer.speciality}}</td>
+        <td>{{trainer.grade}}</td>
+        <td>{{trainer.email}}</td>
+        <td><img src="{{trainer.img}}" width="100px" height="100px"></td>
+        <td>
+            <button class="btn btn-info" (click)="displayTrainer(trainer._id)">Display</button>
+            <button class="btn btn-info" (click)="editTrainer(trainer._id)">Edit</button>
+            <button class="btn btn-info" (click)="deleteTrainer(trainer._id)">Delete</button>
+        </td>
+
+    </tr>
+</table>

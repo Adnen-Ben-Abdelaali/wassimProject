@@ -1,0 +1,54 @@
+<div class="courses" style="margin-top: 150px;">
+  <div class="section_background parallax-window" data-parallax="scroll"
+    data-image-src="assets/images/courses_background.jpg" data-speed="0.8"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="section_title_container text-center">
+          <h2 class="section_title">{{title | reverse}}</h2>
+          <h6 class="section_title">{{currentDate | date:'medium'}}</h6>
+          <div class="section_subtitle"></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="courses-tab" data-bs-toggle="tab" data-bs-target="#courses" type="button"
+            role="tab" aria-controls="courses" aria-selected="true">Courses</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="trainers-tab" data-bs-toggle="tab" data-bs-target="#trainers" type="button"
+            role="tab" aria-controls="trainers" aria-selected="false">Trainers</button>
+        </li>
+
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="events-tab" data-bs-toggle="tab" data-bs-target="#events" type="button"
+            role="tab" aria-controls="events" aria-selected="false">Events</button>
+        </li>
+
+        <!-- <form>
+          <div class="text-center" style="margin-top:50px;">
+                      <label for="">Filter by trainer </label>
+                      <input type="text" [(ngModel)]='term' [ngModelOptions]="{standalone:true}">
+          </div>
+      </form> -->
+
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="courses" role="tabpanel" aria-labelledby="courses-tab">
+            <app-admin-courses></app-admin-courses>
+        </div>
+        <div class="tab-pane fade" id="trainers" role="tabpanel" aria-labelledby="trainers-tab">
+            <app-admin-teachers></app-admin-teachers>
+
+        </div>
+        <div class="tab-pane fade" id="events" role="tabpanel" aria-labelledby="events-tab">
+          <app-admin-events></app-admin-events>
+
+      </div>
+      </div>
+    </div>
+
+  </div>
+</div>

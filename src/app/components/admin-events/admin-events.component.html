@@ -1,0 +1,27 @@
+<table class="table table-striperd">
+  <tr>
+      <th>Event_Id</th>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Place</th>
+      <th>Timing</th>
+      <th>Description</th>
+      <th>Image</th>
+      <th>Actions</th>
+  </tr>
+  <tr *ngFor="let event of events"> 
+      <td>{{event._id}}</td>
+      <td>{{event.title}}</td>
+      <td>{{event.day}}/{{event.month}}/{{event.year}}</td>
+      <td>{{event.place}}</td>
+      <td>{{event.beginTime}}-{{event.endTime}}</td>
+      <td>{{event.description}}</td>
+      <td><img src={{event.image}} width="100px" height="100px"></td>
+      <td>
+          <button class="btn btn-info" (click)="displayEventDetails(event._id)" >Display</button>
+          <button class="btn btn-info" (click)="editEvent(event._id)">Edit</button>
+          <button class="btn btn-info" (click)="deleteEvent(event._id)">Delete</button>
+      </td>
+
+  </tr>
+</table>

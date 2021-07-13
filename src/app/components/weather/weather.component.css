@@ -1,0 +1,16 @@
+.cold
+{
+    color: blue;
+    font-size: 20px;
+}
+.moderate
+{
+    color:green;
+    font-size: 30px;
+}
+
+.hot
+{
+    color:red;
+    font-size: 50px;
+}
